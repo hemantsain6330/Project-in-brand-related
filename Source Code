@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Brand</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientShift {
+ 0% { background-position: 0% 50%; }
+ 50% { background-position: 100% 50%; }
+ 100% { background-position: 0% 50%; }
+}
+
+/* Animated Logo - Top Right Corner */
+.logo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 24px;
+  border: 2px solid rgba(255,255,255,0.3);
+  animation: float 3s ease-in-out infinite;
+  z-index: 100;
+}
+
+@keyframes float {
+ 0%, 100% { transform: translateY(0) rotate(0deg); }
+ 50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; opacity: 0.9; }
+
+/* Features Section */
+.features {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+.card p { opacity: 0.85; line-height: 1.6; }
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .logo { width: 50px; height: 50px; font-size: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Corner Animated Logo -->
+<div class="logo">AB</div>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Welcome to Your Brand</h1>
+  <p>Modern solutions for modern problems</p>
+</section>
+
+<!-- Features -->
+<section class="features">
+  <div class="card">
+    <h3>⚡ Fast Performance</h3>
+    <p>Lightning fast loading speed with optimized code and modern tech stack.</p>
+  </div>
+  <div class="card">
+    <h3>📱 Fully Responsive</h3>
+    <p>Perfect on mobile, tablet, and desktop. Every screen looks premium.</p>
+  </div>
+  <div class="card">
+    <h3>🔒 Secure & Reliable</h3>
+    <p>Enterprise-grade security with 99.9% uptime guarantee for peace of mind.</p>
+  </div>
+</section>
+
+</body>
+</html>
+Logo ke "AB" ko apne brand name ke initials se change kar do. Colors bhi `#667eea` wali line mein change kar sakte ho.
+
+Aur features add karne hain ya navbar + contact form bhi chahiye?
